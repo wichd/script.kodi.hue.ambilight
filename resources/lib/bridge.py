@@ -122,7 +122,7 @@ def _discover_upnp():
 
 def _discover_nupnp():
     # verify false hack until meethue fixes their ssl cert.
-    req = requests.get('https://www.meethue.com/api/nupnp', verify=False)
+    req = requests.get('https://discovery.meethue.com/', verify=False)
     res = req.json()
     bridge_ip = None
     if res:
